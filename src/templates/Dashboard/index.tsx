@@ -1,6 +1,6 @@
 import Button from 'components/Button/button';
 import Main from 'components/Main';
-import Input from 'components/Main/Input';
+import Input from 'components/Input';
 import { FormEvent, useState } from 'react';
 
 import * as S from './styles';
