@@ -11,7 +11,12 @@ const Dashboard = () => {
 
  function handleAddTodoList(event: FormEvent) {
    event.preventDefault();
+
+   if(task === '') return;
+
    setList((oldTodoList) => [... oldTodoList, task]);
+   
+   setTask('');
  }
 
   return (
@@ -19,6 +24,7 @@ const Dashboard = () => {
       <S.Container>
         <form onSubmit={handleAddTodoList} action="">
           <Input type="text" 
+          value={task}
           placeholder='Digite o Nome do Anime' 
           onChange={(event) => setTask(event.target.value)} 
           />
